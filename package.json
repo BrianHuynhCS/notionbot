@@ -1,0 +1,23 @@
+{
+  "name": "notion-bot",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/BrianHuynhCS/notionbot.git"
+  },
+  "author": "Brian Huynh",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/BrianHuynhCS/notionbot/issues"
+  },
+  "homepage": "https://github.com/BrianHuynhCS/notionbot#readme",
+  "dependencies": {
+    "express": "^4.18.2",
+    "twilio": "^4.15.0"
+  }
+}
