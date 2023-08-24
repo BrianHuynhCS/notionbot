@@ -21,13 +21,12 @@ async function initializeBot() {
             console.log('Bot is ready!');
         });
 
-        client.on('messageCreate', (message) => {
-            console.log(`Received message: ${message.content}`);
-        });
-
     } catch (error) {
         console.log("Error loggin in");
     }
 }
 
-initializeBot();
+module.exports = {
+    client,
+    initializeBot,
+}
