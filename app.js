@@ -1,9 +1,6 @@
-// Load environment variables from .env file
-require('dotenv').config();
-
 const discordService = require('./services/discordService');
 const messageController = require('./controllers/messageController');
-const notionService = require('./services/notionService');
+const notionController = require('./controllers/notionController');
 
 const express = require('express');
 
@@ -21,7 +18,7 @@ messageController.eventEmitter.on('chatGPTMessage', (chatGPTMessage) => {
 
   (async () => {
     try {
-      await notionService.addPage(task, tag);
+      await notionController.addPage(task, tag);
       const successMessage = `Added task "${task}" with tag "${tag}" to Notion.`;
       console.log(successMessage);
     } catch (error) {
