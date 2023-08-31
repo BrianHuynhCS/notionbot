@@ -12,7 +12,7 @@ async function categorizeMessage(message) {
       body: JSON.stringify({
         model: "gpt-3.5-turbo",
         messages: [{ role: "user", content: `Can you categorize this message as either project idea or reminder and convert it into JSON 
-        format like {"tag": x, "message": y} to be able to add to Notion? : ${message}`}],
+        format like {"tag": x, "message": y} to be able to add to Notion? Only reply in JSON format: ${message}`}],
       }),
     });
   

@@ -18,8 +18,11 @@ async function initializeBot() {
         console.log(`Logged in as ${client.user.tag}!`);
 
         client.on('ready', () => {
-            console.log('Bot is ready!');
+            const channelId = process.env.DISCORD_CHANNEL;
+            client.channels.cache.get(channelId).send(`${client.user.tag} is now online!`);
         });
+
+
 
     } catch (error) {
         console.log("Error loggin in");
